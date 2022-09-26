@@ -1,9 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=300px height=150px src="crud_logo.png" alt="Project logo"></a>
+ <img width=400px height=200px src="crud_logo.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Movies App with Flux Architecture!</h3>
+<h3 align="center">A CRUD with Express and MongoDB</h3>
 
 <div align="center">
 
@@ -13,7 +13,7 @@
 
 ---
 
-<p align="center"> This project is a CRUD with the Firebase version 9.6.6 using React Native.
+<p align="center"> This project is a CRUD with Express and MongoDB.
     <br> 
 </p>
 
