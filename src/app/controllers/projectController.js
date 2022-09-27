@@ -10,7 +10,7 @@ router.use(authMiddleware);
 
 router.get('/', async (req, res) => {
     try{
-        const projects = await Project.find().populate('user'); //Eager Loading
+        const projects = await Project.find().populate(['user', 'tasks']); //Eager Loading
 
         return res.send({ projects });
     } catch (err) {
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:projectId', async (req, res) => {
-    try{
+    try{       
         const project = await Project.findById(req.params.projectId).populate('user'); //Eager Loading
 
         return res.send({ project });
@@ -30,7 +30,18 @@ router.get('/:projectId', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try{
-        const project = await Project.create({...req.body, user: req.userId}); //Concatenating body and user id
+        const { title, description, tasks } = req.body;
+        
+        const project = await Project.create({title, description, user: req.userId}); //Concatenating body and user id
+
+        await Promise.all(tasks.map(async task => {
+            const projectTask = new Task({ ...task, project: project._id});
+
+            await projectTask.save();
+            project.tasks.push(projectTask);
+        }));
+
+        await project.save();
 
         return res.send({ project });
     } catch (err){
@@ -39,7 +50,32 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:projectId', async (req, res) => {
-    res.send({ user: req.userId});
+    try{
+        const { title, description, tasks } = req.body;
+        
+        const project = await Project.findByIdAndUpdate(
+            req.params.projectId, 
+                {
+                    title, 
+                    description
+                }, { new: true }); //Concatenating body and user id
+
+            project.tasks = [];
+            await Task.remove({ project: project._id });
+        
+            await Promise.all(tasks.map(async task => {
+                const projectTask = new Task({ ...task, project: project._id});
+
+            await projectTask.save();
+            project.tasks.push(projectTask);
+        }));
+
+        await project.save();
+
+        return res.send({ project });
+    } catch (err){
+        return res.status(400).send({ error: 'Error updating new Project'})
+    }
 });
 
 router.delete('/:projectId', async (req, res) => {
