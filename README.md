@@ -151,9 +151,9 @@ app/
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://rnfirebase.io/) - MongoDB
-- [NodeJS](https://reactnative.dev/) - NodeJS
-- [NodeJS](https://reactnative.dev/) - ExpressJS
+- [MongoDB](https://www.mongodb.com/) - MongoDB
+- [NodeJS](https://nodejs.org/en/) - NodeJS
+- [ExpressJS](https://expressjs.com/) - ExpressJS
 
 
 ## ✍️ Authors <a name = "authors"></a>
