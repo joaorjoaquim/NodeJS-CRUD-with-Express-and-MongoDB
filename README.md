@@ -54,10 +54,29 @@ Running the project with the command line
 node src/index.js
 ```
 
-There are 5 different requests to test the CRUD.
+There are 5 different requests to test the CRUD and two others, to Register a user and to authenticate that user.
+For all requests, you will need to save the token (generated when a user is created) as Bearer Token authorization type (wich you get in the response of the Authenticate request).
+
+#### POST Register
+This is a request to register a user. Expect a JSON in the format below with the URL http://localhost:3000/auth/register 
+```
+{
+  "name": "User name",
+  "email": "User email",
+  "password": "User password"
+}
+```
+#### POST Authenticate
+This is a request to Authenticate a user. Expect a JSON in the format below with the URL http://localhost:3000/auth/authenticate
+```
+{
+  "email": "User email",
+  "password": "User password"
+}
+```
 
 #### GET List
-
+This is a request that returns all registered projects.
 ```
 until finished
 ```
