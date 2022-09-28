@@ -48,13 +48,35 @@ What packages do you need to install the software.
 
 A step by step series of examples that tell you how to get a development env running.
 
-Say what the step will be
+Running the project with the command line
 
 ```
-Give the example
+node src/index.js
 ```
 
-And repeat
+There are 5 different requests to test the CRUD.
+
+#### GET List
+
+```
+until finished
+```
+#### GET Show
+
+```
+until finished
+```
+#### POST Create
+
+```
+until finished
+```
+#### PUT Update
+
+```
+until finished
+```
+#### DEL Delete
 
 ```
 until finished
