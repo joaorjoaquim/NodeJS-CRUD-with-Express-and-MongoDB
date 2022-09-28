@@ -145,8 +145,8 @@ app/
 │     └─ auth.json
 │  └─ database/
 │     └─ index.js
+│  └─ index.js
 ├─ .gitignore
-├─ index.js
 ├─ package.json
 ├─ README.md
 └─ yarn.lock
