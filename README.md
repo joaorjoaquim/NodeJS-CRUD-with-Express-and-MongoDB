@@ -121,8 +121,6 @@ This is a request that delete an specific project. Don't need to pass params thr
 http://localhost:3000/projects/633216f1c7c06fdbfe9dd64c
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
-
 
 ## 📁 Structures <a name="structures"></a>
 
@@ -134,14 +132,19 @@ app/
 ├─ src/
 │  └─ app/
 │     └─ controllers/
+│       └─ authController.js
+│       └─ index.js
+│       └─ projectController.js
 │     └─ middlewares/
+│       └─ auth.js
 │     └─ models/
+│       └─ project.js
+│       └─ task.js
+│       └─ user.js
 │  └─ config/
 │     └─ auth.json
 │  └─ database/
 │     └─ index.js
-│  └─ modules/
-│     └─ XXXX.js
 ├─ .gitignore
 ├─ index.js
 ├─ package.json
