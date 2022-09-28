@@ -100,14 +100,25 @@ This is a request to create a project. Expect a JSON in the format below with th
 }
 ```
 #### PUT Update
-
+This is a request that returns an updated project. Expect a JSON in the format below with the URL: http://localhost:3000/projects/+projectId
 ```
-until finished
+URL Example http://localhost:3000/projects/633339a0cf3abd4ffb85c44f
+JSON expected.
+{
+  "title": "new title for the project",
+    "description": "new description for the project",
+    "tasks": [
+        {
+            "title": "new task for the project",
+            "assignedTo": "633215507f7f18e05f5ba8e0"
+        }
+    ]
+}
 ```
 #### DEL Delete
-
+This is a request that delete an specific project. Don't need to pass params through a JSON, just run the request with the URL passing the project's Id: http://localhost:3000/projects/+projectId
 ```
-until finished
+http://localhost:3000/projects/633216f1c7c06fdbfe9dd64c
 ```
 
 End with an example of getting some data out of the system or using it for a little demo.
