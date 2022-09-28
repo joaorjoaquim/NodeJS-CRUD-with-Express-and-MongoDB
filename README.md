@@ -76,19 +76,28 @@ This is a request to Authenticate a user. Expect a JSON in the format below with
 ```
 
 #### GET List
-This is a request that returns all registered projects.
-```
-until finished
-```
-#### GET Show
+This is a request that returns all registered projects. Don't need to pass params through a JSON, just run the request with the URL: http://localhost:3000/projects
 
+#### GET Show
+This is a request that returns an specific project. Don't need to pass params through a JSON, just run the request with the URL: http://localhost:3000/projects/+projectId
+
+Example
 ```
-until finished
+http://localhost:3000/projects/633216f1c7c06fdbfe9dd64c
 ```
 #### POST Create
-
+This is a request to create a project. Expect a JSON in the format below with the URL http://localhost:3000/projects
 ```
-until finished
+{
+  "title": "Project title",
+  "description": "description of the project",
+  "tasks": [
+    {
+    "title": "task title",
+    "assignedTo": "userId"
+    },...
+  ]
+}
 ```
 #### PUT Update
 
