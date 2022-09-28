@@ -27,7 +27,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-About the Project
+This project it's about developing skills in MongoDB and NodeJS, creating a CRUD in the backend using ExpressJS as a framework.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
