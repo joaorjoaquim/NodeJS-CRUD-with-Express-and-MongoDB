@@ -13,10 +13,6 @@
 
 ---
 
-<p align="center"> This project is a CRUD with Express and MongoDB.
-    <br> 
-</p>
-
 ## 📝 Table of Contents
 
 - [About](#about)
@@ -31,14 +27,21 @@ This project it's about developing skills in MongoDB and NodeJS, creating a CRUD
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites & Installing
 
-What things you need to install the software and how to install them.
+What packages do you need to install the software.
 
 ```
-Give examples
+-NodeJS    
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.1",
+    "path": "^0.12.7"
 ```
 
 ### Runing & Usage
